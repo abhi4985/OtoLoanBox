@@ -9,6 +9,8 @@ import io.restassured.http.Headers;
 public class ApiPaths {
 	
 	public static String base_path  ="http://int-backend-stage.oto.com/";
+	public static String sfa_base_path ="http://int-sfa-stage.oto.com/";
+	public static String market_mrp_cars  ="api/v2/market-mrp-cars";
 
     public static String send_otp  ="loan/user/send_otp";
     public static String login_otp  ="loan/user/login-otp";
@@ -18,9 +20,18 @@ public class ApiPaths {
     //inventory
     public static String loan_stock = "inventory/inventory/stocklist";
     
+   
+    
     //Quote
     public static String multi_quote_form="loan/quote/quote_form_fields";
     public static String multi_getquotes="loan/quote/get_quotes";
+    public static String get_config=" loan/config/get";
+    
+    
+    
+    //Header
+    public static String source_sfa="sfa";
+    public static String key_sfa="SFAUQPlnGed0dQ8iWosxptjSbUJOJ1NEQ";
     
     public static Headers getHeaders() {
     	Header h1= new Header("Accept", "*/*");

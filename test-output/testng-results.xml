@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12386" started-at="2022-02-08T19:55:45 IST" finished-at="2022-02-08T19:55:58 IST">
+  <suite name="Default suite" duration-ms="4249" started-at="2022-02-14T17:48:02 IST" finished-at="2022-02-14T17:48:07 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12386" started-at="2022-02-08T19:55:45 IST" finished-at="2022-02-08T19:55:58 IST">
-      <class name="testcase.AllMMV">
-        <test-method status="PASS" signature="getAllMMV()[pri:0, instance:testcase.AllMMV@67b467e9]" name="getAllMMV" duration-ms="12359" started-at="2022-02-08T19:55:45 IST" finished-at="2022-02-08T19:55:58 IST">
+    <test name="Default test" duration-ms="4249" started-at="2022-02-14T17:48:02 IST" finished-at="2022-02-14T17:48:07 IST">
+      <class name="testcase.LoanStock">
+        <test-method status="PASS" signature="getLoanStock()[pri:0, instance:testcase.LoanStock@10dba097]" name="getLoanStock" duration-ms="4220" started-at="2022-02-14T17:48:02 IST" finished-at="2022-02-14T17:48:07 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getAllMMV -->
-      </class> <!-- testcase.AllMMV -->
+        </test-method> <!-- getLoanStock -->
+      </class> <!-- testcase.LoanStock -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

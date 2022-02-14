@@ -49,7 +49,7 @@ public class GetQuoteDynamic2 {
 		field =new MultiQuoteFormField();
 		//Response formResponse = field.getMultiQuoteFormFields();
 		Response loginResponse = email.TestEmailLogin();
-		Response loanStock = LoanStockList.getLoanStock();
+	//	Response loanStock = LoanStockList.getLoanStock();
 
 		
 		
@@ -59,7 +59,7 @@ public class GetQuoteDynamic2 {
 		
         //////////////////////// read sheet ///////////////////
         
-		  JSONObject obj = new JSONObject(loanStock.asString());
+		  JSONObject obj = new JSONObject(""/*+loanStock.asString()*/);
 	      /*  String pageName = obj.getJSONObject("pageInfo").getString("pageName");
 
 	        System.out.println(pageName);*/

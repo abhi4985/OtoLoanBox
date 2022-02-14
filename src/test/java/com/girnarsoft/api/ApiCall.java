@@ -43,5 +43,20 @@ public class ApiCall {
 		return response;
 
 	}
+	public static Response postApiWithBaseUrl(String requestBody,String baseUrl){
+
+		RestAssured.baseURI=ApiPaths.sfa_base_path;
+		Response response=RestAssured
+				.given().log().all()
+				.contentType(ContentType.JSON)
+				//.headers(ApiPaths.getHeaders())
+				.headers("source",ApiPaths.source_sfa)
+				.headers("key",ApiPaths.key_sfa)
+				.body(requestBody)
+				.when().post(baseUrl);
+
+		return response;
+
+	}
 
 }

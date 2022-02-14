@@ -49,6 +49,16 @@ public class ApiTestUtils {
     	 String path = ""+getJsonPath(response).get(jsonpath);
     	 return path;	
     }
+    // get a value from response value
+    public static boolean getBooleanResponse(Response response,String jsonpath) {
+    	 boolean path = ""+getJsonPath(response).get(jsonpath) != null;
+    	 return path;	
+    }
+ // get a long int value from response value
+    public static long getLongIntValueFromAResponse(Response response,String jsonpath) {
+    	 String path = ""+getJsonPath(response).get(jsonpath);
+    	 return Integer.parseInt(path);	
+    }
     
 	// We can get a value from all elements of array
     public static List<String> getAValueFromList(Response response,String jsonpath) {

@@ -21,6 +21,7 @@ import org.testng.annotations.Test;
 import com.girnarsoft.api.ApiCall;
 import com.girnarsoft.api.ApiPaths;
 import com.girnarsoft.api.ApiTestUtils;
+import com.girnarsoft.api.ReadExcelFile;
 import com.google.gson.Gson;
 
 import Utility.Constants;
@@ -85,7 +86,8 @@ public class AllMMV {
 		XSSFSheet sheetVersion = workbook.createSheet("Version");
 		int rowCount = 0;
 
-		makedata.put("0", new Object[] {"id","MakeName","category_id"});
+		makedata.put(""+ 0, new Object[] {"make_id","make_Name","category_id"});
+
 		for (int i = 0; i < jsonArrayMake.length(); ++i) {
 
 			//  JSONObject objn = new JSONObject();
@@ -96,7 +98,7 @@ public class AllMMV {
 
 
 			System.out.println(jsonArrayMake.getJSONObject(i).get("make"));
-			makedata.put(""+ i, new Object[] {id,MakeName,category_id});
+			makedata.put(""+1+ i, new Object[] {id,MakeName,category_id});
 
 		}
 		for (int i = 0; i < jsonArrayModel.length(); ++i) {
@@ -138,9 +140,9 @@ public class AllMMV {
 
 		}
 		/////////////////// Writing in Excel Sheet ///////////////////
-		createData(makedata,sheetMake);
-		createData(modeldata,sheetModel);
-		createData(versiondata,sheetVersion);
+		ReadExcelFile.createData(makedata,sheetMake);
+		ReadExcelFile.createData(modeldata,sheetModel);
+		ReadExcelFile.createData(versiondata,sheetVersion);
 
 
 
@@ -169,25 +171,7 @@ public class AllMMV {
 
 
 	}
-	public void createData(Map<String, Object[]> data, XSSFSheet sheet) {
-		//Iterate over data and write to sheet
-		Set<String> keyset = data.keySet();
-		int rownum = 0;
-		for (String key : keyset)
-		{
-			Row row = sheet.createRow(rownum++);
-			Object [] objArr = data.get(key);
-			int cellnum = 0;
-			for (Object obj : objArr)
-			{
-				Cell cell = row.createCell(cellnum++);
-				if(obj instanceof String)
-					cell.setCellValue((String)obj);
-				else if(obj instanceof Integer)
-					cell.setCellValue((Integer)obj);
-			}
-		}
-	}
+	
 
 }
 
