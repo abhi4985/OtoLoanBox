@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4249" started-at="2022-02-14T17:48:02 IST" finished-at="2022-02-14T17:48:07 IST">
+  <suite name="Default suite" duration-ms="11736" started-at="2022-02-14T19:13:27 IST" finished-at="2022-02-14T19:13:39 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4249" started-at="2022-02-14T17:48:02 IST" finished-at="2022-02-14T17:48:07 IST">
-      <class name="testcase.LoanStock">
-        <test-method status="PASS" signature="getLoanStock()[pri:0, instance:testcase.LoanStock@10dba097]" name="getLoanStock" duration-ms="4220" started-at="2022-02-14T17:48:02 IST" finished-at="2022-02-14T17:48:07 IST">
+    <test name="Default test" duration-ms="11736" started-at="2022-02-14T19:13:27 IST" finished-at="2022-02-14T19:13:39 IST">
+      <class name="runner.TestMultiQuote">
+        <test-method status="PASS" signature="testMultiQuote()[pri:0, instance:runner.TestMultiQuote@10dba097]" name="testMultiQuote" duration-ms="11695" started-at="2022-02-14T19:13:27 IST" finished-at="2022-02-14T19:13:39 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getLoanStock -->
-      </class> <!-- testcase.LoanStock -->
+        </test-method> <!-- testMultiQuote -->
+      </class> <!-- runner.TestMultiQuote -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

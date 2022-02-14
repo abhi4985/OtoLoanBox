@@ -54,8 +54,8 @@ public class LoanStockList {
 		carPrice=ApiTestUtils.getValueFromAResponse(response,"data[1].car_price");
 		JSONObject obj = new JSONObject(response.asString());
 		JSONArray arr = obj.getJSONArray("data");
-       
-        loancarlist.put(""+ 0, new Object[] {"car_id","dealer_id","make_month","make_year","version_id",
+		 loancarlist.put(""+ 0, new Object[] {"carTest","8"});
+        loancarlist.put(""+ 1, new Object[] {"car_id","dealer_id","make_month","make_year","version_id",
         		"reg_no","reg_month","reg_year","km_driven","uc_colour","car_price","fuel_type","transmission",
         		"car_body_type","model","model_id","make_id","make","modelVersion"});
 		for (int i = 0; i < arr.length(); ++i) {
@@ -83,7 +83,7 @@ public class LoanStockList {
 		//	System.out.println(arr.getJSONObject(i).get("reg_no"));
 			
 			 
-			loancarlist.put(""+1+ i, new Object[] {id,dealer_id,make_month,make_year,version_id,reg_no,
+			loancarlist.put(""+2+ i, new Object[] {id,dealer_id,make_month,make_year,version_id,reg_no,
 					reg_month,reg_year,km_driven,uc_colour,car_price,fuel_type,transmission,car_body_type,model,
 					model_id,make_id,make,modelVersion});
 
