@@ -4,12 +4,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import com.girnarsoft.api.ApiCall;
-import com.girnarsoft.api.ApiPaths;
-import com.girnarsoft.api.ApiTestUtils;
-import com.girnarsoft.api.ReadExcelFile;
+
 import com.google.gson.Gson;
 
+import api.ApiCall;
+import api.ApiPaths;
+import api.ApiTestUtils;
+import api.ReadExcelFile;
 import io.restassured.response.Response;
 
 public class TestData {

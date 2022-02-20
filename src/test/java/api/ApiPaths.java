@@ -1,4 +1,4 @@
-package com.girnarsoft.api;
+package api;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,16 +20,24 @@ public class ApiPaths {
     //inventory
     public static String loan_stock = "inventory/inventory/stocklist";
     
-   
+   //rule_engine
+    public static String sync_mmv = "loan/rule_engine/sync_mmv";
+    public static String get_model_code = "loan/rule_engine/get_model_code";
+    
+    //Lead
+    public static String addlead = "loan/lead/addlead";
+    public static String savedoc = "loan/lead/save_doc";
     
     //Quote
     public static String multi_quote_form="loan/quote/quote_form_fields";
     public static String multi_getquotes="loan/quote/get_quotes";
-    public static String get_config=" loan/config/get";
+    public static String get_config="loan/config/get";
+    public static String calculate_loan="loan/rule_engine/calculate_loan";
     
     
     
     //Header
+    public static String source_gcloud="GCLOUD";
     public static String source_sfa="sfa";
     public static String key_sfa="SFAUQPlnGed0dQ8iWosxptjSbUJOJ1NEQ";
     

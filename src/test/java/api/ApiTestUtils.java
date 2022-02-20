@@ -1,4 +1,4 @@
-package com.girnarsoft.api;
+package api;
 
 import java.util.List;
 import java.util.Map;

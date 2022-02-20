@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="runner.TestMultiQuote">
+      <class name="runner.BCAF">
         <methods>
-          <include name="testMultiQuote"/>
+          <include name="testBCAF"/>
         </methods>
-      </class> <!-- runner.TestMultiQuote -->
+      </class> <!-- runner.BCAF -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

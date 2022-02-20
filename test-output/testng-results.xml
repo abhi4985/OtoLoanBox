@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11736" started-at="2022-02-14T19:13:27 IST" finished-at="2022-02-14T19:13:39 IST">
+  <suite name="Default suite" duration-ms="7732" started-at="2022-02-20T10:26:13 IST" finished-at="2022-02-20T10:26:20 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11736" started-at="2022-02-14T19:13:27 IST" finished-at="2022-02-14T19:13:39 IST">
-      <class name="runner.TestMultiQuote">
-        <test-method status="PASS" signature="testMultiQuote()[pri:0, instance:runner.TestMultiQuote@10dba097]" name="testMultiQuote" duration-ms="11695" started-at="2022-02-14T19:13:27 IST" finished-at="2022-02-14T19:13:39 IST">
+    <test name="Default test" duration-ms="7732" started-at="2022-02-20T10:26:13 IST" finished-at="2022-02-20T10:26:20 IST">
+      <class name="runner.BCAF">
+        <test-method status="PASS" signature="testBCAF()[pri:0, instance:runner.BCAF@10dba097]" name="testBCAF" duration-ms="7698" started-at="2022-02-20T10:26:13 IST" finished-at="2022-02-20T10:26:20 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMultiQuote -->
-      </class> <!-- runner.TestMultiQuote -->
+        </test-method> <!-- testBCAF -->
+      </class> <!-- runner.BCAF -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

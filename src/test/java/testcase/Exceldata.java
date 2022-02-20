@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 import org.testng.annotations.Test;
 
-import com.girnarsoft.api.ReadExcelFile;
+import api.ReadExcelFile;
 
 public class Exceldata {
 	@Test

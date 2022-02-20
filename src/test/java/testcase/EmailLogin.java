@@ -7,13 +7,13 @@ import java.util.Properties;
 
 import org.testng.annotations.Test;
 
-import com.girnarsoft.api.ApiCall;
-import com.girnarsoft.api.ApiPaths;
-import com.girnarsoft.api.ApiTestUtils;
 import com.google.gson.Gson;
 
 import Utility.Constants;
 import Utility.Utils;
+import api.ApiCall;
+import api.ApiPaths;
+import api.ApiTestUtils;
 import io.restassured.response.Response;
 import model.Login;
 
