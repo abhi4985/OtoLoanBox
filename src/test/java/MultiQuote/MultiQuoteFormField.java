@@ -1,4 +1,4 @@
-package multiquote;
+package MultiQuote;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,14 +16,14 @@ import com.google.gson.JsonObject;
 
 import Utility.Constants;
 import Utility.Utils;
-import api.ApiCall;
-import api.ApiPaths;
-import api.ApiTestUtils;
-import api.ReadExcelFile;
-import commoncall.Login;
 import io.restassured.response.Response;
-import testcase.EmailLogin;
+import testClasses.EmailLogin;
 import utility.Operation;
+import utilsApi.ApiCall;
+import utilsApi.ApiPaths;
+import utilsApi.ApiTestUtils;
+import utilsApi.ReadExcelFile;
+import utilsCommonClass.Login;
 
 public class MultiQuoteFormField {
 	static String customer_region_id;

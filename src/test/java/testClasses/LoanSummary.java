@@ -1,4 +1,4 @@
-package testcase;
+package testClasses;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -9,11 +9,11 @@ import org.testng.annotations.Test;
 import com.google.gson.Gson;
 
 import Utility.Utils;
-import api.ApiCall;
-import api.ApiPaths;
-import api.ApiTestUtils;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import utilsApi.ApiCall;
+import utilsApi.ApiPaths;
+import utilsApi.ApiTestUtils;
 
 public class LoanSummary {
 	

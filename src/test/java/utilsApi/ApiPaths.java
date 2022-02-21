@@ -1,4 +1,4 @@
-package api;
+package utilsApi;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +11,7 @@ public class ApiPaths {
 	public static String base_path  ="http://int-backend-stage.oto.com/";
 	public static String sfa_base_path ="http://int-sfa-stage.oto.com/";
 	public static String market_mrp_cars  ="api/v2/market-mrp-cars";
+	public static String getmrp_cars  ="loan/rule_engine/get_mrp";
 
     public static String send_otp  ="loan/user/send_otp";
     public static String login_otp  ="loan/user/login-otp";

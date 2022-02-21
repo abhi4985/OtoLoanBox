@@ -1,4 +1,4 @@
-package testcase;
+package testClasses;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -7,11 +7,11 @@ import java.util.Map;
 
 import com.google.gson.Gson;
 
-import api.ApiCall;
-import api.ApiPaths;
-import api.ApiTestUtils;
-import api.ReadExcelFile;
 import io.restassured.response.Response;
+import utilsApi.ApiCall;
+import utilsApi.ApiPaths;
+import utilsApi.ApiTestUtils;
+import utilsApi.ReadExcelFile;
 
 public class TestData {
 	

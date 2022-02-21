@@ -1,11 +1,11 @@
-package testcase;
+package testClasses;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
 import org.testng.annotations.Test;
 
-import api.ReadExcelFile;
+import utilsApi.ReadExcelFile;
 
 public class Exceldata {
 	@Test

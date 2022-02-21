@@ -39,17 +39,24 @@ public class Constants {
 	public static final String CreateMultiQuoteExcelFile = "../OtoDealer/resource/multiquote.xlsx";
 	public static final String OtoFinancerExcelFile = "../OtoDealer/resource/OtoFinancer.xlsx";
 	public static final String AddLeadExcelFile = "../OtoDealer/resource/addlead.xlsx";
+	public static final String FinancerMMVExcelFile = "../OtoDealer/resource/financerMMV.xlsx";
 	
 	//json file path
-	public static final String jsonFilePath ="../OtoDealer/src/test/java/payload/";
-	public static final String LoginJson ="../OtoDealer/src/test/java/payload/loginData.json";
-	public static final String multiQuoteJson ="../OtoDealer/src/test/java/payload/multiQuote.json";
-	public static final String carMarketMrpJson ="../OtoDealer/src/test/java/payload/carMarketMrp.json";
-	public static final String getConfigJson ="../OtoDealer/src/test/java/payload/getconfig.json";
-	public static final String mufCalLoan ="../OtoDealer/src/test/java/payload/MUFCalculateLoan.json";
-	public static final String syncMMVJson ="../OtoDealer/src/test/java/payload/syncmav.json";
-	public static final String getModelcode ="../OtoDealer/src/test/java/payload/getmodelcode.json";
-	public static final String getMrp ="../OtoDealer/src/test/java/payload/getmrp.json";
-	public static final String addLead ="../OtoDealer/src/test/java/payload/nonrulefinancer.json";
+	public static final String jsonFilePath ="../OtoDealer/src/test/java/utilsPayload/";
+	public static final String LoginJson ="../OtoDealer/src/test/java/utilsPayload/loginData.json";
+	public static final String multiQuoteJson ="../OtoDealer/src/test/java/utilsPayload/multiQuote.json";
+	public static final String carMarketMrpJson ="../OtoDealer/src/test/java/utilsPayload/carMarketMrp.json";
+	public static final String getConfigJson ="../OtoDealer/src/test/java/utilsPayload/getconfig.json";
+	public static final String mufCalLoan ="../OtoDealer/src/test/java/utilsPayload/MUFCalculateLoan.json";
+	public static final String syncMMVJson ="../OtoDealer/src/test/java/utilsPayload/syncmav.json";
+	public static final String getModelcode ="../OtoDealer/src/test/java/utilsPayload/getmodelcode.json";
+	public static final String getMrp ="../OtoDealer/src/test/java/utilsPayload/getmrp.json";
+	public static final String addLead ="../OtoDealer/src/test/java/utilsPayload/nonrulefinancer.json";
+	public static final String cnafCalLoan ="../OtoDealer/src/test/java/utilsPayload/CNAFcalloan.json";
+	public static final String buanaCalLoan ="../OtoDealer/src/test/java/utilsPayload/Buanacalloan.json";
+	public static final String adiraCalLoan ="../OtoDealer/src/test/java/utilsPayload/Adiracalloan.json";
+	public static final String bfiCalLoan ="../OtoDealer/src/test/java/utilsPayload/BFIcalloan.json";
+	public static final String mpmfCalLoan ="../OtoDealer/src/test/java/utilsPayload/MPMFcalloan.json";
+	public static final String bcamfCalLoan ="../OtoDealer/src/test/java/utilsPayload/BCAMFcalloan.json";
 	
 }

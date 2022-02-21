@@ -1,4 +1,4 @@
-package testcase;
+package testClasses;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -22,12 +22,12 @@ import com.google.gson.Gson;
 
 import Utility.Constants;
 import Utility.Utils;
-import api.ApiCall;
-import api.ApiPaths;
-import api.ApiTestUtils;
-import api.ReadExcelFile;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import utilsApi.ApiCall;
+import utilsApi.ApiPaths;
+import utilsApi.ApiTestUtils;
+import utilsApi.ReadExcelFile;
 
 public class AllMMV {
 

@@ -1,4 +1,4 @@
-package testcase;
+package testClasses;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -11,11 +11,11 @@ import com.google.gson.Gson;
 
 import Utility.Constants;
 import Utility.Utils;
-import api.ApiCall;
-import api.ApiPaths;
-import api.ApiTestUtils;
 import io.restassured.response.Response;
-import model.Login;
+import utilsApi.ApiCall;
+import utilsApi.ApiPaths;
+import utilsApi.ApiTestUtils;
+import utilsModelClass.Login;
 
 public class EmailLogin {
 	Login login;
