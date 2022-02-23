@@ -45,6 +45,10 @@ public class Utils {
 		System.out.println("Log " +log);
 
 	}
+	public static void logPrint(String printmessage,String logprint) {
+		System.out.println(printmessage+ "----" +logprint);
+
+	}
 	public static void getDate() {
 		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		Calendar cal = Calendar.getInstance();

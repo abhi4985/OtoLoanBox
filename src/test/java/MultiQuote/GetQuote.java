@@ -51,7 +51,7 @@ public class GetQuote {
 		bodyData.put("residence_type",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",16,c));
 		bodyData.put("payment_type",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",17,c));
 		bodyData.put("mrp",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",20,c));
-				//ExcelUtils.readCellData(Constants.ExcelTestData,"loanStock",testCar,10));
+		//ExcelUtils.readCellData(Constants.ExcelTestData,"loanStock",testCar,10));
 		bodyData.put("price_upping_id",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",21,c));
 		bodyData.put("mrp_with_upping",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",22,c));
 		bodyData.put("dealer_price",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",24,c));
@@ -136,24 +136,24 @@ public class GetQuote {
 				break; 
 			case "MUF": 
 				if (!objinner.isEmpty()) {
-	//				{"total_dp":17165000,"dp_amount":13000000,"installment":4468000,"mrp":65000000,"total_payment_to_dealer":48250000,"tenure":12}
+					//				{"total_dp":17165000,"dp_amount":13000000,"installment":4468000,"mrp":65000000,"total_payment_to_dealer":48250000,"tenure":12}
 					int totaldp = objinner.getInt("total_dp");
 					int dp_amount = objinner.getInt("dp_amount");
 					int installment = objinner.getInt("installment");
 					int mrp = objinner.getInt("mrp");
 					int total_payment_to_dealer = objinner.getInt("total_payment_to_dealer");
 					int tenure = objinner.getInt("tenure");
-				System.out.println("td "+totaldp+" dpamount "+dp_amount+" inst "+installment);
-				System.out.println(" mrp "+mrp+" pay to del "+total_payment_to_dealer+" ten "+tenure);
-			
+					System.out.println("td "+totaldp+" dpamount "+dp_amount+" inst "+installment);
+					System.out.println(" mrp "+mrp+" pay to del "+total_payment_to_dealer+" ten "+tenure);
+
 					String mintotalDP=ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",26,c);
-					String instalmentamount=ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",27,c);
-					String numofinstallment=ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",28,c);
+					String instamount=ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",27,c);
+					String numofinst=ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",28,c);
 					String totalpayementtodealer=ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",29,c);
 					String ltv=ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",30,c);
 					String totalDP=ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",31,c);
-					
-					System.out.println("td "+mintotalDP+" insamount "+instalmentamount+" num inst "+numofinstallment);
+
+					System.out.println("td "+mintotalDP+" insamount "+instamount+" num inst "+numofinst);
 					System.out.println(" tolpaytodel "+totalpayementtodealer+" ltv "+ltv+" totdp "+totalDP);
 					ExcelUtils.writSpecificCellData(Constants.OtoFinancerExcelFile,"MUFMQ",36,c,totaldp);
 					ExcelUtils.writSpecificCellData(Constants.OtoFinancerExcelFile,"MUFMQ",37,c,dp_amount);
@@ -161,12 +161,13 @@ public class GetQuote {
 					ExcelUtils.writSpecificCellData(Constants.OtoFinancerExcelFile,"MUFMQ",39,c,mrp);
 					ExcelUtils.writSpecificCellData(Constants.OtoFinancerExcelFile,"MUFMQ",40,c,total_payment_to_dealer);
 					ExcelUtils.writSpecificCellData(Constants.OtoFinancerExcelFile,"MUFMQ",41,c,tenure);
+
 					Assert.assertEquals(totaldp, Integer.parseInt(mintotalDP));
-					Assert.assertEquals(installment, Integer.parseInt(instalmentamount));
+					Assert.assertEquals(installment, Integer.parseInt(instamount));
 					Assert.assertEquals(dp_amount, Integer.parseInt(totalDP));
 					Assert.assertEquals(total_payment_to_dealer, Integer.parseInt(totalpayementtodealer));
-					Assert.assertEquals(tenure,Integer.parseInt(numofinstallment));
-					
+					Assert.assertEquals(tenure,Integer.parseInt(numofinst));
+
 					/*if(totaldp==Integer.parseInt(totalDP)) {
 					System.out.println("total dp match");
 				//	ExcelUtils.writSpecificCellData(Constants.OtoFinancerExcelFile,"MUFMQ",36,c,totaldp);
@@ -174,15 +175,15 @@ public class GetQuote {
 						System.out.println("else total dp match");
 					}
 						if(tenure==Integer.parseInt(numofinstallment)) {
-					
+
 						System.out.println("num of inst match");
 					//	ExcelUtils.writSpecificCellData(Constants.OtoFinancerExcelFile,"MUFMQ",41,c,totaldp);
 						}
 						else {
 							System.out.println("else num of inst match");
 						}*/
-				
-				//	System.out.println(objinner);
+
+					//	System.out.println(objinner);
 				}
 				break; 
 			case "Maybank": 
