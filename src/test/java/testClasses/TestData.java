@@ -23,8 +23,7 @@ public class TestData {
 	public static void main(String[] args) throws IOException, AddressException, MessagingException {
 		ReadExcelFile d=new ReadExcelFile();
 		ArrayList<String> data=d.getData("login","islogin","y");
-		//d.writeExcelData();
-		//d.AddSheet();
+	
 
 		System.out.println("data "+ data);
 		System.out.println(data.get(1));
