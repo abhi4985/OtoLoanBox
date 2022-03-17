@@ -40,12 +40,13 @@ public class TestData {
 		ApiTestUtils.getAllApiResponse(response);
 		ApiTestUtils.checkStatusCode(response, 200);
 		ApiTestUtils.getStatusLineAssertTrue(response, "OK");
-
+        System.out.println("status "+ApiTestUtils.getValueFromResponse(response, "status"));
+        System.out.println(ApiTestUtils.getValueFromResponse(response, "message"));
 		String res =response.getBody().asString();
 		ApiTestUtils.checkResponse(response, "Success");
 
-		SendMail.send(InvokeMail.server,InvokeMail.from, InvokeMail.to, InvokeMail.subject, 
-				InvokeMail.messageBody, InvokeMail.attachmentPath, InvokeMail.attachmentName);
+	//	SendMail.send(InvokeMail.server,InvokeMail.from, InvokeMail.to, InvokeMail.subject, 
+		//		InvokeMail.messageBody, InvokeMail.attachmentPath, InvokeMail.attachmentName);
 	}
 }
 

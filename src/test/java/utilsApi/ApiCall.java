@@ -5,6 +5,7 @@ import java.util.Map;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import utility.FilterRequestData;
 
 public class ApiCall {
 	
@@ -25,6 +26,7 @@ public class ApiCall {
 		RestAssured.baseURI=ApiPaths.base_path;
 		Response response=RestAssured
 				.given()
+				/*.filter(new FilterRequestData())*/
 				.headers(ApiPaths.getHeaders())
 				.body(requestBody)
 				.when().post(apiPath);

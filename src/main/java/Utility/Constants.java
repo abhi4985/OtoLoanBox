@@ -2,6 +2,10 @@ package Utility;
 
 public class Constants {
 	
+	public static final String PlatForm_Name = "API";
+	public static final String Project_Name = "OTO";
+	public static final String Module_Name = "DO";
+	
 	//Financer Id
 	public static final String BCAF ="1";
 	public static final String DSF ="2";
@@ -40,6 +44,8 @@ public class Constants {
 	public static final String OtoFinancerExcelFile = "../OtoDealer/resource/OtoFinancer.xlsx";
 	public static final String AddLeadExcelFile = "../OtoDealer/resource/addlead.xlsx";
 	public static final String FinancerMMVExcelFile = "../OtoDealer/resource/financerMMV.xlsx";
+	public static final String MultiQutoeFinancerExcelFile ="../OtoDealer/resource/MultiQutoeFinancer.xlsx";
+	public static final String ProjectBasePath= "../OtoDealer";
 	
 	//json file path
 	public static final String jsonFilePath ="../OtoDealer/src/test/java/utilsPayload/";

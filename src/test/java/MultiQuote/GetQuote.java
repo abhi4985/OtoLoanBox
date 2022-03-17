@@ -30,31 +30,31 @@ public class GetQuote {
 		//String bodyData=LoadJsonFile.handleJson(Constants.multiQuoteJson);
 		JSONObject bodyData = new JSONObject();
 		bodyData.put("dealer_id",Login.dealerid);
-		bodyData.put("customer_region_id",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",1,c));
-		bodyData.put("olx_mrp",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",20,c));	
-		bodyData.put("customer_area_id",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",2,c));
+		bodyData.put("customer_region_id",ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",1,c));
+		bodyData.put("olx_mrp",ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",20,c));	
+		bodyData.put("customer_area_id",ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",2,c));
 		bodyData.put("make_id",ExcelUtils.readCellData(Constants.ExcelTestData,"loanStock",testCar,16));
 		bodyData.put("model_id",ExcelUtils.readCellData(Constants.ExcelTestData,"loanStock",testCar,15));
 		bodyData.put("version_id",ExcelUtils.readCellData(Constants.ExcelTestData,"loanStock",testCar,4));
 		bodyData.put("make_year",ExcelUtils.readCellData(Constants.ExcelTestData,"loanStock",testCar,3));
-		bodyData.put("plate_area_id",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",4,c));
-		bodyData.put("vehicle_type_id",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",8,c));
-		bodyData.put("brand_type",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",10,c));
-		bodyData.put("uses_type",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",11,c));
-		bodyData.put("insurance_type_id",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",18,c));
-		bodyData.put("tenure",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",19,c));
-		bodyData.put("existing_customer",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",12,c));
-		bodyData.put("applicant_type_id",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",23,c));
-		bodyData.put("customer_age",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",14,c));
-		bodyData.put("occupation",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",3,c));
-		bodyData.put("distance_fee_id",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",15,c));
-		bodyData.put("residence_type",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",16,c));
-		bodyData.put("payment_type",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",17,c));
-		bodyData.put("mrp",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",20,c));
+		bodyData.put("plate_area_id",ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",4,c));
+		bodyData.put("vehicle_type_id",ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",8,c));
+		bodyData.put("brand_type",ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",10,c));
+		bodyData.put("uses_type",ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",11,c));
+		bodyData.put("insurance_type_id",ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",18,c));
+		bodyData.put("tenure",ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",19,c));
+		bodyData.put("existing_customer",ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",12,c));
+		bodyData.put("applicant_type_id",ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",23,c));
+		bodyData.put("customer_age",ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",14,c));
+		bodyData.put("occupation",ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",3,c));
+		bodyData.put("distance_fee_id",ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",15,c));
+		bodyData.put("residence_type",ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",16,c));
+		bodyData.put("payment_type",ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",17,c));
+		bodyData.put("mrp",ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",20,c));
 		//ExcelUtils.readCellData(Constants.ExcelTestData,"loanStock",testCar,10));
-		bodyData.put("price_upping_id",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",21,c));
-		bodyData.put("mrp_with_upping",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",22,c));
-		bodyData.put("dealer_price",ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",24,c));
+		bodyData.put("price_upping_id",ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",21,c));
+		bodyData.put("mrp_with_upping",ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",22,c));
+		bodyData.put("dealer_price",ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",24,c));
 
 
 		Response resp=ApiCall.postApiWithHeader(bodyData.toString(),ApiPaths.multi_getquotes,Login.token);
@@ -86,57 +86,58 @@ public class GetQuote {
 
 			switch(arr.getJSONObject(i).getString("financier_name")){  
 			case "Adira": 
-				System.out.println("Adira");  
+				System.out.println(arr.getJSONObject(i).getString("financier_name"));  
 				System.out.println(objinner);
 				break;  
 			case "BFI":
-				System.out.println("BFI");  
+				System.out.println(arr.getJSONObject(i).getString("financier_name"));  
 				System.out.println(objinner);
 
 				break; 
 			case "MPMF": 
-				System.out.println("MPMF"); 
+				System.out.println(arr.getJSONObject(i).getString("financier_name"));  
 				System.out.println(objinner);
 
 				break;  
 			case "BCAMF":
-				System.out.println("BCAMF");
+				System.out.println(arr.getJSONObject(i).getString("financier_name"));  
 				System.out.println(objinner);
 
 				break; 
 			case "Clipan": 
-				System.out.println("Clipan"); 
+				System.out.println(arr.getJSONObject(i).getString("financier_name"));  
 				System.out.println(objinner);
 
 				break;  
 			case "DSF":
-				System.out.println("DSF");
+				System.out.println(arr.getJSONObject(i).getString("financier_name"));  
 				System.out.println(objinner);
 
 				break; 
 			case "SMSF": 
-				System.out.println("SMSF");  
+				System.out.println(arr.getJSONObject(i).getString("financier_name"));  
 				System.out.println(objinner);
 
 				break;  
 			case "KP": 
-				System.out.println("KP"); 
+				System.out.println(arr.getJSONObject(i).getString("financier_name"));  
 				System.out.println(objinner);
 
 				break; 
 			case "SKBF": 
-				System.out.println("SKBF");  
+				System.out.println(arr.getJSONObject(i).getString("financier_name"));  
 				System.out.println(objinner);
 
 				break;  
 			case "Trihamas": 
-				System.out.println("Trihamas"); 
+				System.out.println(arr.getJSONObject(i).getString("financier_name"));  
 				System.out.println(objinner);
 
 				break; 
 			case "MUF": 
+				System.out.println(arr.getJSONObject(i).getString("financier_name"));  
 				if (!objinner.isEmpty()) {
-					//				{"total_dp":17165000,"dp_amount":13000000,"installment":4468000,"mrp":65000000,"total_payment_to_dealer":48250000,"tenure":12}
+					
 					int totaldp = objinner.getInt("total_dp");
 					int dp_amount = objinner.getInt("dp_amount");
 					int installment = objinner.getInt("installment");
@@ -146,21 +147,21 @@ public class GetQuote {
 					System.out.println("td "+totaldp+" dpamount "+dp_amount+" inst "+installment);
 					System.out.println(" mrp "+mrp+" pay to del "+total_payment_to_dealer+" ten "+tenure);
 
-					String mintotalDP=ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",26,c);
-					String instamount=ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",27,c);
-					String numofinst=ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",28,c);
-					String totalpayementtodealer=ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",29,c);
-					String ltv=ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",30,c);
-					String totalDP=ExcelUtils.readCellData(Constants.OtoFinancerExcelFile,"MUFMQ",31,c);
+					String mintotalDP=ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",26,c);
+					String instamount=ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",27,c);
+					String numofinst=ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",28,c);
+					String totalpayementtodealer=ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",29,c);
+					String ltv=ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",30,c);
+					String totalDP=ExcelUtils.readCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",31,c);
 
 					System.out.println("td "+mintotalDP+" insamount "+instamount+" num inst "+numofinst);
 					System.out.println(" tolpaytodel "+totalpayementtodealer+" ltv "+ltv+" totdp "+totalDP);
-					ExcelUtils.writSpecificCellData(Constants.OtoFinancerExcelFile,"MUFMQ",36,c,totaldp);
-					ExcelUtils.writSpecificCellData(Constants.OtoFinancerExcelFile,"MUFMQ",37,c,dp_amount);
-					ExcelUtils.writSpecificCellData(Constants.OtoFinancerExcelFile,"MUFMQ",38,c,installment);
-					ExcelUtils.writSpecificCellData(Constants.OtoFinancerExcelFile,"MUFMQ",39,c,mrp);
-					ExcelUtils.writSpecificCellData(Constants.OtoFinancerExcelFile,"MUFMQ",40,c,total_payment_to_dealer);
-					ExcelUtils.writSpecificCellData(Constants.OtoFinancerExcelFile,"MUFMQ",41,c,tenure);
+					ExcelUtils.writSpecificCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",36,c,totaldp);
+					ExcelUtils.writSpecificCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",37,c,dp_amount);
+					ExcelUtils.writSpecificCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",38,c,installment);
+					ExcelUtils.writSpecificCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",39,c,mrp);
+					ExcelUtils.writSpecificCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",40,c,total_payment_to_dealer);
+					ExcelUtils.writSpecificCellData(Constants.MultiQutoeFinancerExcelFile,"MUF",41,c,tenure);
 
 					Assert.assertEquals(totaldp, Integer.parseInt(mintotalDP));
 					Assert.assertEquals(installment, Integer.parseInt(instamount));
@@ -187,26 +188,21 @@ public class GetQuote {
 				}
 				break; 
 			case "Maybank": 
-				System.out.println("Maybank");
+				System.out.println(arr.getJSONObject(i).getString("financier_name"));  
 				System.out.println(objinner);
-				if (!objinner.isEmpty()) {
-					System.out.println("if");
-				}else {
-					System.out.println("else");
-				}
 				break;  
 			case "Buana": 
-				System.out.println("Buana");
+				System.out.println(arr.getJSONObject(i).getString("financier_name"));  
 				System.out.println(objinner);
 				break; 
 			default:
-				System.out.println("Not in finance");  
+				System.out.println("No financer");  
 			}  
 		}
 	}
 	@Test
 	public void getQuote() throws IOException {
-		int length=ExcelUtils.getNumberOfColumn(Constants.OtoFinancerExcelFile,"MUFMQ",1);
+		int length=ExcelUtils.getNumberOfColumn(Constants.MultiQutoeFinancerExcelFile,"MUF",1);
 
 		try {
 			System.out.println("col length "+length);
