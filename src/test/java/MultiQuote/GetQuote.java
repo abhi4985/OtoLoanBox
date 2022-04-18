@@ -8,6 +8,7 @@ import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import Base.ReportBaseClass;
 import Utility.Constants;
 import Utility.Utils;
 import io.restassured.response.Response;
@@ -19,12 +20,13 @@ import utilsApi.ApiTestUtils;
 import utilsCommonClass.Login;
 
 
-public class GetQuote {
+public class GetQuote extends ReportBaseClass{
 
 
 	public void getMultiQuote(int c) throws IOException {
 
 
+		ReportBaseClass.logger=ReportBaseClass.report.createTest("Test Multiquote");
 		int testCar=Integer.parseInt(ExcelUtils.readCellData(Constants.ExcelTestData,"loanStock",0,1));	
 
 		//String bodyData=LoadJsonFile.handleJson(Constants.multiQuoteJson);
@@ -199,6 +201,7 @@ public class GetQuote {
 				System.out.println("No financer");  
 			}  
 		}
+		ReportBaseClass.logger.info("Test Multiquote is executed");
 	}
 	@Test
 	public void getQuote() throws IOException {

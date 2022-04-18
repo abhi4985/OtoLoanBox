@@ -8,11 +8,11 @@
     <classes>
       <class name="utilsRunner.TestMultiQuote">
         <methods>
-          <include name="EndSuite"/>
-          <include name="setUpSuite"/>
-          <include name="testMultiQuote"/>
           <include name="tearDown"/>
           <include name="tearDownMethod"/>
+          <include name="testMultiQuote"/>
+          <include name="setUpSuite"/>
+          <include name="EndSuite"/>
         </methods>
       </class> <!-- utilsRunner.TestMultiQuote -->
     </classes>

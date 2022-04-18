@@ -14,6 +14,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
+import Base.ReportBaseClass;
 import Utility.Constants;
 import Utility.Utils;
 import io.restassured.response.Response;
@@ -25,7 +26,7 @@ import utilsApi.ApiTestUtils;
 import utilsApi.ReadExcelFile;
 import utilsCommonClass.Login;
 
-public class MultiQuoteFormField {
+public class MultiQuoteFormField extends ReportBaseClass {
 	static String customer_region_id;
 	static String customer_area_id;
 	static String plate_area_id;
@@ -53,11 +54,12 @@ public class MultiQuoteFormField {
 		bodyParams.put("dealer_id", Login.dealerid);
 
 		String payload=new Gson().toJson(bodyParams);
-
+		ReportBaseClass.logger=ReportBaseClass.report.createTest("Test Multiquote Form Field");
 		Response resp=ApiCall.postApiWithHeader(payload,ApiPaths.multi_quote_form,Login.token);
 
 		ApiTestUtils.getAllApiResponse(resp);
 		ApiTestUtils.checkStatusCode(resp, 200);
+		ReportBaseClass.logger.info("Multi Quote form Test executed");
 		customer_region_id=ApiTestUtils.getValueFromAResponse(resp,"data[0].field_value[0].id");
 		customer_area_id=ApiTestUtils.getValueFromAResponse(resp,"data[1].field_value[0].id");
 		plate_area_id=ApiTestUtils.getValueFromAResponse(resp,"data[6].field_value[0].id");
@@ -123,7 +125,7 @@ public class MultiQuoteFormField {
 					 
 				
 				 ReadExcelFile.createMultipleSheetData(data,Constants.CreateMultiQuoteExcelFile,"MultiQuote");
-			 
+				 ReportBaseClass.logger.info("Multi Quoteform adding excelsheet executed");
 		  }
 	       	
 
