@@ -2,31 +2,24 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="5755" started-at="2022-03-21T20:53:16 IST" finished-at="2022-03-21T20:53:22 IST">
+  <suite name="Default suite" duration-ms="1710" started-at="2022-04-18T12:22:47 IST" finished-at="2022-04-18T12:22:48 IST">
     <groups>
     </groups>
-    <test name="ProductSuite" duration-ms="5755" started-at="2022-03-21T20:53:16 IST" finished-at="2022-03-21T20:53:22 IST">
-      <class name="utilsRunner.TestMultiQuote">
-        <test-method status="PASS" signature="setUpSuite()[pri:0, instance:utilsRunner.TestMultiQuote@3d0f8e03]" name="setUpSuite" is-config="true" duration-ms="6128" started-at="2022-03-21T20:53:10 IST" finished-at="2022-03-21T20:53:16 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpSuite -->
-        <test-method status="FAIL" signature="testMultiQuote()[pri:0, instance:utilsRunner.TestMultiQuote@3d0f8e03]" name="testMultiQuote" duration-ms="5731" started-at="2022-03-21T20:53:16 IST" finished-at="2022-03-21T20:53:22 IST">
+    <test name="Default test" duration-ms="1710" started-at="2022-04-18T12:22:47 IST" finished-at="2022-04-18T12:22:48 IST">
+      <class name="testClasses.LoginTest">
+        <test-method status="FAIL" signature="TestLogin()[pri:0, instance:testClasses.LoginTest@4cf4d528]" name="TestLogin" duration-ms="1679" started-at="2022-04-18T12:22:47 IST" finished-at="2022-04-18T12:22:48 IST">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [249150294] but found [22064216]]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [249150294] but found [22064216]
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
 at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:907)
-at org.testng.Assert.assertEquals(Assert.java:917)
-at MultiQuote.GetQuote.getMultiQuote(GetQuote.java:168)
-at MultiQuote.GetQuote.getQuote(GetQuote.java:213)
-at utilsRunner.TestMultiQuote.testMultiQuote(TestMultiQuote.java:34)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at org.testng.Assert.assertTrue(Assert.java:55)
+at utilsApi.ApiTestUtils.checkResponse(ApiTestUtils.java:24)
+at testClasses.LoginTest.TestLogin(LoginTest.java:51)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -60,27 +53,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMultiQuote -->
-        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:utilsRunner.TestMultiQuote@3d0f8e03]" name="tearDownMethod" is-config="true" duration-ms="5" started-at="2022-03-21T20:53:22 IST" finished-at="2022-03-21T20:53:22 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testMultiQuote status=FAILURE method=TestMultiQuote.testMultiQuote()[pri:0, instance:utilsRunner.TestMultiQuote@3d0f8e03] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownMethod -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:utilsRunner.TestMultiQuote@3d0f8e03]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-03-21T20:53:22 IST" finished-at="2022-03-21T20:53:22 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="EndSuite()[pri:0, instance:utilsRunner.TestMultiQuote@3d0f8e03]" name="EndSuite" is-config="true" duration-ms="204" started-at="2022-03-21T20:53:22 IST" finished-at="2022-03-21T20:53:22 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- EndSuite -->
-      </class> <!-- utilsRunner.TestMultiQuote -->
-    </test> <!-- ProductSuite -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- TestLogin -->
+      </class> <!-- testClasses.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
